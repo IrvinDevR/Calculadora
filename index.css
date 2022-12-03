@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto+Condensed:wght@300;400;700&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+:root {
+   --ff-Poppins: 'Poppins', sans-serif;
+   --ff-Roboto: 'Roboto Condensed',
+      sans-serif;
+   --ff-SyneMono: 'Syne Mono', monospace;
+   --ff-pantalla: 'Shadows Into Light', cursive;
+   --bgc-pantalla: rgba(225 220 220 /.75);
+   --border-btn: 1px solid #fff;
+   --borRad-tbn: 50%;
+   --boxShad-btn: -1px -1px 5px rgba(255 255 255 /.6),
+      1px 1px 5px rgba(0 0 0 /.3),
+      inset -2px -2px 5px rgba(255 255 255 /.6),
+      inset 2px 2px 4px rgba(0 0 0 /.3);
+   --color-txt-btn: #222;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   transition: .2s;
+   -webkit-transition: .2s;
+   -moz-transition: .2s;
+   -ms-transition: .2s;
+   -o-transition: .2s;
+}
+
+body {
+   width: 100%;
+   height: 100%;
+   background: #222;
+   color: #fff;
+}
+
+.title-calc {
+   width: 100%;
+   margin: 40px auto 20px;
+   text-align: center;
+   font-family: var(--ff-SyneMono);
+   font-weight: 400;
+   font-size: 28px;
+}
+
+
+.pantalla {
+   background-color: #fff;
+   width: 95%;
+   height: 80px;
+   margin: 15px auto;
+   color: #222;
+   box-shadow: var(--boxShad-btn);
+   background-color: var(--bgc-pantalla);
+   border: var(--border-btn);
+   border-radius: 35px;
+   -webkit-border-radius: 35px;
+   -moz-border-radius: 35px;
+   -ms-border-radius: 35px;
+   -o-border-radius: 35px;
+}
+
+input[type="textfield"] {
+   /*PANTALLA*/
+   height: 48%;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0);
+   outline: none;
+   border: none;
+   text-align: end;
+   font-size: 30px;
+   padding-right: 22px;
+   color: rgb(31, 54, 54);
+   font-family: var(--ff-pantalla);
+   font-weight: bold;
+   padding-bottom: 10px;
+}
+
+input[type="textfield"]:nth-child(1) {
+   padding-bottom: 0;
+}
+
+
+form[name="calculator"] {
+   border: 2px solid #fff;
+   width: 250px;
+   margin: 0 auto;
+   border-radius: 34px;
+   -webkit-border-radius: 34px;
+   -moz-border-radius: 34px;
+   -ms-border-radius: 34px;
+   -o-border-radius: 34px;
+   box-shadow: var(--boxShad-btn);
+   background-color: rgba(202, 194, 194, 0.057);
+   padding: 10px;
+}
+
+.botones {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+   justify-content: center;
+   align-items: center;
+   padding: 8px;
+   row-gap: 5px;
+   column-gap: 5px;
+   grid-template-areas:
+      "element1 element2 element3 element4"
+      "element5 element6 element7 element8"
+      "element9 element10 element11 element12"
+      "element13 element14 element15 element16"
+      "element17 element18 element19 element19"
+   ;
+}
+
+.btn {
+   width: 50px;
+   height: 50px;
+   border: var(--border-btn);
+   border-radius: var(--borRad-tbn);
+   -webkit-border-radius: var(--borRad-tbn);
+   -moz-border-radius: var(--borRad-tbn);
+   -ms-border-radius: var(--borRad-tbn);
+   -o-border-radius: var(--borRad-tbn);
+   text-align: center;
+   cursor: pointer;
+   background-color: #222;
+   font-size: 20px;
+   padding-top: 8px;
+   font-family: var(--ff-Poppins);
+   color: #fff;
+   caret-color: rgba(34, 34, 34, 0);
+   outline: none;
+   padding-top: 6px;
+}
+
+#btn-c {
+   background-color: #fff;
+   color: #222;
+   box-shadow: var(--boxShad-btn);
+}
+
+#btn-igual {
+   background-color: #fff;
+   color: #222;
+   box-shadow: var(--boxShad-btn);
+   border-radius: 38px;
+   -webkit-border-radius: 38px;
+   -moz-border-radius: 38px;
+   -ms-border-radius: 38px;
+   -o-border-radius: 38px;
+   grid-area: element19;
+   width: 105px;
+}
+
+.btn:hover {
+   box-shadow: var(--boxShad-btn);
+   background-color: var(--bgc-pantalla);
+   color: var(--color-txt-btn);
+   font-weight: 400;
+}
+
+#btn-c:hover,
+#btn-igual:hover {
+   background-color: #222;
+   color: #fff;
+   box-shadow: none;
+}
+
+.btn:active {
+   color: #fff;
+   background-color: #222;
+   text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.76);
+}
+
+#btn-c:active {
+   color: #fff;
+   font-weight: bold;
+   background-color: rgb(233, 49, 49);
+   text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.76);
+}
+#btn-igual:active {
+   color: #fff;
+   font-weight: bold;
+   background-color: rgb(112, 235, 85);
+   text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.76);
+}

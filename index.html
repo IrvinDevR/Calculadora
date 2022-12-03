@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Calculadora</title>
+      <link rel="stylesheet" href="index.css">
+      <link rel="shortcut i  con" href="img/calculadora-icon.pngbtn btn-" type="image/x-icon">
+   </head>
+
+   <body>
+      <main>
+         <section class="title-calc">
+            <h1>Calculadora</h1>
+         </section>
+         <section class="contenedor">
+
+            <form name="calculator">
+               <div class="pantalla">
+                  <input type="textfield" name="ans" value="" autocomplete="off" readonly>
+                  <input type="textfield" name="ans2" value="" autocomplete="off" readonly placeholder="0">
+               </div>
+               <div class="botones">
+                  <!-- <input type="button" class="btn" id="btn-9" value="%" onclick="document.calculator.ans.value+='*0.01*'"> -->
+                  <input type="button" class="btn" id="btn-divi" value="(" onclick="document.calculator.ans.value+='('">
+                  <input type="button" class="btn" id="btn-divi" value=")" onclick="document.calculator.ans.value+=')'">
+                  <input type="button" class="btn" id="btn-divi" value="÷" onclick="document.calculator.ans.value+='/'">
+                  <input type="reset" class="btn" id="btn-c" value="C">
+
+                  <input type="button" class="btn" id="btn-7" value="7" onclick="document.calculator.ans.value+='7'">
+                  <input type="button" class="btn" id="btn-8" value="8" onclick="document.calculator.ans.value+='8'">
+                  <input type="button" class="btn" id="btn-9" value="9" onclick="document.calculator.ans.value+='9'">
+                  <input type="button" class="btn" id="btn-multi" value="x"
+                     onclick="document.calculator.ans.value+='*'">
+
+                  <input type="button" class="btn" id="btn-4" value="4" onclick="document.calculator.ans.value+='4'">
+                  <input type="button" class="btn" id="btn-5" value="5" onclick="document.calculator.ans.value+='5'">
+                  <input type="button" class="btn" id="btn-6" value="6" onclick="document.calculator.ans.value+='6'">
+                  <input type="button" class="btn" id="btn-suma" value="+" onclick="document.calculator.ans.value+='+'">
+
+                  <input type="button" class="btn" id="btn-1" value="1" onclick="document.calculator.ans.value+='1'">
+                  <input type="button" class="btn" id="btn-2" value="2" onclick="document.calculator.ans.value+='2'">
+                  <input type="button" class="btn" id="btn-3" value="3" onclick="document.calculator.ans.value+='3'">
+                  <input type="button" class="btn" id="btn-divi" value="-" onclick="document.calculator.ans.value+='-'">
+
+                  <input type="button" class="btn" id="btn-punto-decimal" value="."
+                     onclick="document.calculator.ans.value+='.'">
+                  <input type="button" class="btn" id="btn-0" value="0" onclick="document.calculator.ans.value+='0'">
+                  <input type="button" class="btn" id="btn-igual" value="="
+                     onclick="document.calculator.ans2.value+=eval(document.calculator.ans.value).toFixed(1)">
+               </div>
+            </form>
+         </section>
+      </main>
+   </body>
+   <script src="index.js"></script>
+
+</html>
